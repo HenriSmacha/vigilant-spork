@@ -20,7 +20,7 @@ public class LoginTestCase {
 		WebDriverManager.chromedriver().setup();//configura para o navegador
 		//baixa dependencias antes do teste
 		this.driver = new ChromeDriver();//ChromeDriver ou qualquer navegador
-		this.driver.get("http://demo.virtuemart.net/");//referencia site a ser testado
+		this.driver.get("http://xiru.rs/d/trocas/homolog/");//referencia site a ser testado
 		this.verificationPoint = new LoginVerificationPoint(driver);
 	}
 	@Test
@@ -32,7 +32,7 @@ public class LoginTestCase {
 		this.driver.findElement(By.cssSelector("input.button:nth-child(3)")).click();
 		this.verificationPoint.checkHello();
 	}
-	
+
 	@After
 	public void tearDown() {
 		this.driver.quit();
